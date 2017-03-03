@@ -13,7 +13,7 @@ To use this code:
     * Push this repository to that application
     * Provision a new device with this application, set to connect over wifi
       (download the host OS and boot it up)
-    * In a browser open http://<ip_address>:3000/
+    * In a browser open http://ip_address:3000/
     * Use admin/admin to login
 
 See the ntopng user guide for more information
