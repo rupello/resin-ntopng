@@ -3,9 +3,11 @@ FROM resin/%%RESIN_MACHINE_NAME%%-debian:latest
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
 
-# Install bridging depeendencies
+# update and install wget
 RUN apt-get update && apt-get install -yq apt-utils
 RUN  apt-get -yq install wget
+
+# perform steps described at http://packages.ntop.org/RaspberryPI/
 RUN wget http://packages.ntop.org/apt/ntop.key
 RUN apt-key add ntop.key
 RUN echo "deb http://apt.ntop.org/jessie_pi armhf/" > /etc/apt/sources.list.d/ntop.list
